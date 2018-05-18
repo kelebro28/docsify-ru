@@ -3,3 +3,4 @@
   - [:de: Deutsch](/de-de/)
   - [:ru: Russian](/ru-ru/)
   - [:uk: English](/)
+  - [:es: Spanish](https://docsify-es.js.org)
