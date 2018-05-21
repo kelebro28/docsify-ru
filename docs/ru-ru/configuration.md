@@ -45,7 +45,7 @@ window.$docsify = {
 * Type: `Number`
 * Default: `6`
 
-Таблица максимального уровня контента.
+Таблица максимального уровня вложенности контента.
 
 ```js
 window.$docsify = {
@@ -92,7 +92,7 @@ window.$docsify = {
 * Type: `Number`
 * Default: `0`
 
-Добавить оглавление (Table Of Contents) в боковую панель.
+Максимальный уровень вложенности оглавления в Sidebar панели.
 
 ```js
 window.$docsify = {
@@ -346,7 +346,7 @@ window.$docsify = {
 * type: `String`
 * default: `_blank`
 
-Цель открыть внешние ссылки. По умолчанию `'_blank'` (new window/tab)
+Target внешние ссылки. По умолчанию `'_blank'` (new window/tab)
 
 ```js
 window.$docsify = {

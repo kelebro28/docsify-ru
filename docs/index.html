@@ -23,45 +23,59 @@
 </head>
 
 <body>
-  <div id="app">Loading ...</div>
+  <div id="app">Загрузка ...</div>
   <script>
     window.$docsify = {
+      // basePath: 'docs/',
+      homepage: '/ru-ru/README.md',
       alias: {
         '.*?/awesome': 'https://raw.githubusercontent.com/QingWei-Li/awesome-docsify/master/README.md',
         '.*?/changelog': 'https://raw.githubusercontent.com/QingWei-Li/docsify/master/CHANGELOG.md',
-        '/.*/_navbar.md': '/_navbar.md'
+        // '.*?#/': '#/ru-ru/'
+        // '/.*/_navbar.md': '/_navbar.md'
       },
       auto2top: true,
-      coverpage: true,
+      coverpage: 'ru-ru/_coverpage.md',
+      // onlyCover: true,
       executeScript: true,
-      loadSidebar: true,
-      loadNavbar: true,
+      // loadSidebar: true,
+      loadSidebar: 'ru-ru/_sidebar.md',
+      // loadNavbar: true,
+      loadNavbar: 'ru-ru/_navbar.md',
       mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 2,
       ga: 'UA-106147152-1',
       name: 'docsify',
+      nameLink: {
+        '/ru-ru/': '#/ru-ru/',
+        '/': '#/ru-ru/'
+      },
       search: {
-        noData: {
-          '/de-de/': 'Keine Ergebnisse!',
-          '/zh-cn/': '没有结果!',
-          '/ru-ru/': 'Нет результатов!',
-          '/': 'No results!'
-        },
         paths: 'auto',
+        noData: {
+          // '/de-de/': 'Keine Ergebnisse!',
+          // '/zh-cn/': '没有结果!',
+          '/ru-ru/': 'Нет результатов!',
+          '/': 'Нет результатов!'
+        },
         placeholder: {
-          '/de-de/': 'Suche',
-          '/zh-cn/': '搜索',
+          // '/de-de/': 'Suche',
+          // '/zh-cn/': '搜索',
           '/ru-ru/': 'Поиск',
-          '/': 'Search'
+          '/': 'Поиск'
         }
       },
+      // fallbackLanguages: [
+      //   "ru-ru"
+      // ],
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            var url = 'https://github.com/QingWei-Li/docsify/blob/master/docs/' + vm.route.file
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            // var url = 'https://github.com/truepatch/docsify-ru/blob/master/docs/' + vm.route.file
+            var url = 'https://github.com/truepatch/docsify-ru/blob/docsify-ru/docs/' + vm.route.file
+            var editHtml = '[:memo: Редактировать документ](' + url + ')\n'
 
             return editHtml
               + html
@@ -69,7 +83,7 @@
               + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
           })
         },
-        DocsifyCodefund.create('fae1f9a4-870c-4c25-b8e0-c80464f7a95c')
+        // DocsifyCodefund.create('')
       ]
     }
   </script>

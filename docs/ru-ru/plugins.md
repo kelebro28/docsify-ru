@@ -7,23 +7,25 @@
 ```html
 <script>
   window.$docsify = {
-    search: 'auto', // default
+    search: 'auto', // по умолчанию
 
     search : [
       '/',            // => /README.md
       '/guide',       // => /guide.md
       '/get-started', // => /get-started.md
+      '/ru-ru/',      // => /ru-ru/README.md
       '/zh-cn/',      // => /zh-cn/README.md
     ],
 
     // полные параметры конфигурации
     search: {
-      maxAge: 86400000, // Expiration time, the default one day
-      paths: [], // or 'auto'
-      placeholder: 'Type to search',
+      maxAge: 86400000, // Срок действия, по умолчанию один день
+      paths: [], // или 'auto'
+      placeholder: 'Введите что начать поиск',
 
       // Локализация
       placeholder: {
+        '/ru-ru/': 'Поиск',
         '/zh-cn/': '搜索',
         '/': 'Type to search'
       },
@@ -32,6 +34,7 @@
 
       // Локализация
       noData: {
+        '/ru-ru/': 'Нет результатов',
         '/zh-cn/': '找不到结果',
         '/': 'No Results'
       },

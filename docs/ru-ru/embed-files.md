@@ -13,7 +13,7 @@
 
 [filename](../_media/example.md ':include')
 
-Вы можете проверить исходное содержимое для [example.md](_media/example.md ':ignore').
+Вы можете проверить исходное содержимое для [example.md](../_media/example.md ':ignore').
 
 Обычно это будет скомпилировано в ссылку, но в docsify, если вы добавите `:include`, он будет внедрён.
 
